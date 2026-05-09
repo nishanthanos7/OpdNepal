@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbfaf6;
+  --foreground: #0b1220;
+  --paper: #fbfaf6;
+  --paper-2: #f4f1ea;
+  --ink: #0b1220;
+  --ink-soft: #1a2233;
+  --mute: #5b6776;
+  --line: #e6e1d6;
+  --accent: #0f4c5c;
+  --accent-2: #14687d;
+  --accent-soft: #e6f1f2;
+  --gold: #b68a35;
+  --danger: #8a2a2a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-mute: var(--mute);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-soft: var(--accent-soft);
+  --color-gold: var(--gold);
+  --color-danger: var(--danger);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-newsreader);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Subtle paper grain — pure CSS, no image, no perf cost */
+.bg-paper-grain {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgba(11, 18, 32, 0.025) 1px, transparent 1px),
+    radial-gradient(rgba(11, 18, 32, 0.018) 1px, transparent 1px);
+  background-size: 22px 22px, 36px 36px;
+  background-position: 0 0, 11px 18px;
+}
+
+/* Editorial divider used in section headings */
+.rule-gold {
+  height: 1px;
+  width: 2.25rem;
+  background: var(--gold);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* One reusable, GPU-cheap entry animation. Reduced motion respected. */
+@keyframes praxis-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.anim-rise {
+  animation: praxis-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.anim-rise-1 { animation-delay: 0.05s; }
+.anim-rise-2 { animation-delay: 0.15s; }
+.anim-rise-3 { animation-delay: 0.25s; }
+.anim-rise-4 { animation-delay: 0.35s; }
+.anim-rise-5 { animation-delay: 0.45s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-rise {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Native FAQ accordion polish */
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-chev {
+  transform: rotate(45deg);
+}
+.faq-chev {
+  transition: transform 0.2s ease;
 }
