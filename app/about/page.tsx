@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/layout/PageHero";
 import { Container } from "@/components/layout/Container";
 import { CheckIcon } from "@/components/icons";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "A small studio of one, focused exclusively on websites for Nepal's doctors, clinics and hospitals.",
+    "Nishan Poudel runs OpdNepal — a small studio of one, focused exclusively on websites for Nepal's doctors, clinics and hospitals.",
 };
 
 const principles = [
@@ -37,16 +39,71 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About"
+        eyebrow={`About ${siteConfig.studio}`}
         title={
           <>
-            A small studio of one.
+            I&rsquo;m Nishan Poudel.
             <br />
-            <span className="italic text-accent">Built for Nepal&rsquo;s medical professionals.</span>
+            <span className="italic text-accent">A studio of one, for Nepal&rsquo;s medical professionals.</span>
           </>
         }
-        lede="I write code. I read medical papers for fun. I believe a clinic's website should feel as calm and considered as the consultation room itself. This page explains how I work — and why."
+        lede="I write code. I read medical papers for fun. I run OpdNepal — a one-person studio that builds calm, professional websites for Nepal's doctors, clinics and hospitals. This page explains how I work, and why a NPR 9,999 portfolio site is, for most doctors, the smartest first move."
       />
+
+      <section className="border-b border-line py-20 md:py-28">
+        <Container size="md">
+          <div className="grid gap-12 md:grid-cols-12 md:items-center">
+            <div className="md:col-span-5">
+              <figure className="relative overflow-hidden rounded-3xl border border-line bg-paper-2">
+                <div className="relative aspect-4/5 w-full">
+                  <Image
+                    src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=900&q=80"
+                    alt="Nishan Poudel — developer and founder of OpdNepal"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 480px"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="border-t border-line bg-paper px-5 py-4 text-xs uppercase tracking-[0.18em] text-mute">
+                  Nishan Poudel · OpdNepal · Kathmandu
+                </figcaption>
+              </figure>
+            </div>
+
+            <div className="md:col-span-7">
+              <p className="text-xs uppercase tracking-[0.18em] text-mute">
+                A short introduction
+              </p>
+              <h2 className="mt-3 font-serif text-3xl text-ink sm:text-4xl">
+                One developer. One inbox.
+                <br />
+                <span className="italic text-accent">No agency between us.</span>
+              </h2>
+              <div className="mt-5 space-y-5 text-[15px] leading-7 text-ink-soft">
+                <p>
+                  When you write to OpdNepal, the email lands in my own
+                  inbox. I read it. I reply. I write the code. I push it to
+                  production. There is no account manager, no junior to
+                  hand it off to, and no template factory churning out
+                  forty sites a month.
+                </p>
+                <p>
+                  That is the whole point of a studio of one — and the
+                  reason I can offer a real, professional Doctor Portfolio
+                  for{" "}
+                  <span className="font-medium text-ink">NPR 9,999</span>.
+                  No agency overhead, no padded retainers, no surprise
+                  invoices.
+                </p>
+                <p className="font-serif italic text-mute">
+                  &ldquo;The doctor patients trust online is, more often than
+                  not, simply the doctor whose website loaded first.&rdquo;
+                </p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       <section className="border-b border-line py-20 md:py-28">
         <Container size="md">

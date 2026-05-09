@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { whyReasons } from "@/lib/content";
@@ -17,6 +18,25 @@ export function WhyWebsiteSection() {
           }
           lede="Six things a real medical website does for a clinic — quietly, every day, while you focus on patients."
         />
+
+        <figure className="mt-14 overflow-hidden rounded-3xl border border-line bg-paper">
+          <div className="relative aspect-16/7 w-full">
+            <Image
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80"
+              alt="A calm clinic consultation — stethoscope on a clean desk"
+              fill
+              sizes="(max-width: 768px) 100vw, 1100px"
+              className="object-cover"
+              priority={false}
+            />
+          </div>
+          <figcaption className="flex flex-wrap items-center justify-between gap-3 border-t border-line bg-paper px-6 py-4 text-xs uppercase tracking-[0.18em] text-mute">
+            <span>Field note №&nbsp;002</span>
+            <span className="font-serif normal-case tracking-normal text-ink-soft italic">
+              The clinic that shows up online is the one the patient walks into.
+            </span>
+          </figcaption>
+        </figure>
 
         <ul className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {whyReasons.map((r) => {

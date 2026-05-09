@@ -22,6 +22,20 @@ const nextConfig: NextConfig = {
   // Production source maps are large and slow to emit. Keep them off
   // unless you genuinely need them in production debugging.
   productionBrowserSourceMaps: false,
+
+  // Allow next/image to optimize remote photographs we use as
+  // illustrative placeholders (portrait, clinic scene). Restricted to
+  // Unsplash's CDN so arbitrary URLs cannot be proxied through our
+  // optimizer.
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

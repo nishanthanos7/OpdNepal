@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to Praxis. Email, phone or a short brief — replies within 24 hours, Sunday to Friday.",
+    "Talk to Nishan Poudel at OpdNepal. Email, phone or a short brief — replies within 24 hours, Sunday to Friday.",
 };
 
 export default function ContactPage() {

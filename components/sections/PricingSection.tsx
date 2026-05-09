@@ -13,12 +13,13 @@ export function PricingSection() {
           eyebrow="Honest, fixed pricing"
           title={
             <>
-              No retainers. No hourly billing.
+              Most doctors start at{" "}
+              <span className="italic text-accent">NPR 9,999</span>.
               <br className="hidden sm:block" />
-              You see the price <span className="italic text-accent">before</span> we begin.
+              No retainers, no hourly billing, no surprises.
             </>
           }
-          lede="Three engagement sizes. The middle one fits most clinics. Indicative pricing — final quote after the free audit and discovery call."
+          lede="Three engagement sizes. Most doctors begin with the Portfolio — it is the smallest possible step that still produces a real, professional, fast site. You can always upgrade later."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">

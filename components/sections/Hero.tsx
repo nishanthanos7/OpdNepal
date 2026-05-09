@@ -29,10 +29,14 @@ export function Hero() {
             </h1>
 
             <p className="anim-rise anim-rise-3 mt-7 max-w-xl text-lg leading-8 text-mute">
-              I build calm, fast, professional websites for doctors, clinics
-              and hospitals in Nepal — from a one-page portfolio to a full
-              appointment-booking system. No agency overhead. No bloated
-              templates. Just one developer, focused on healthcare.
+              I&rsquo;m{" "}
+              <span className="text-ink-soft">Nishan Poudel</span> — a
+              Kathmandu-based developer who builds calm, fast, professional
+              websites for doctors, clinics and hospitals in Nepal. From a{" "}
+              <span className="text-ink-soft">NPR 9,999 portfolio site</span>{" "}
+              that goes live in ten days, to a full appointment-booking
+              system. No agency overhead. No bloated templates. One
+              developer, focused on healthcare.
             </p>
 
             <div className="anim-rise anim-rise-4 mt-9 flex flex-wrap items-center gap-3">
@@ -82,10 +86,18 @@ export function Hero() {
                 <dl className="grid grid-cols-3 gap-4 text-center">
                   <div>
                     <dt className="text-[10px] uppercase tracking-[0.16em] text-mute">
-                      Focus
+                      Studio
                     </dt>
                     <dd className="mt-1 font-serif text-base text-ink">
-                      Healthcare
+                      OpdNepal
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-[10px] uppercase tracking-[0.16em] text-mute">
+                      Lead
+                    </dt>
+                    <dd className="mt-1 font-serif text-base text-ink">
+                      N. Poudel
                     </dd>
                   </div>
                   <div>
@@ -94,14 +106,6 @@ export function Hero() {
                     </dt>
                     <dd className="mt-1 font-serif text-base text-ink">
                       Nepal
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.16em] text-mute">
-                      Studio
-                    </dt>
-                    <dd className="mt-1 font-serif text-base text-ink">
-                      Of one
                     </dd>
                   </div>
                 </dl>
