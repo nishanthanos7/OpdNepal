@@ -2,6 +2,11 @@ import path from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Emit a self-contained server bundle at .next/standalone so the
+  // production Docker image only needs Node.js and the traced files,
+  // not the full node_modules tree.
+  output: "standalone",
+
   // Pin the Turbopack root to this app so a stray lockfile in a parent
   // directory cannot confuse module resolution or trigger the
   // "inferred workspace root" warning at build time.
