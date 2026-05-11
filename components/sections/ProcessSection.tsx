@@ -15,7 +15,7 @@ export function ProcessSection() {
               <span className="italic text-accent">No hourly billing surprises.</span>
             </>
           }
-          lede="The same calm, structured process you would expect from a clinical workflow — applied to building your website."
+          lede="A calm, structured process — like a clinical workflow, but for your website."
         />
 
         <ol className="mt-14 space-y-4">

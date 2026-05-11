@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 };
 
 const includes = [
-  "How your clinic shows up on Google for your name and specialty",
-  "Mobile speed score and biggest performance leak",
-  "Top 3 trust signals you are missing right now",
-  "How your Facebook / Maps listing compares to nearby clinics",
-  "A short, written summary you can share with your team",
+  "How your clinic shows up on Google",
+  "Mobile speed score & biggest fix",
+  "Top 3 trust signals you are missing",
+  "How your Facebook / Maps listing compares",
+  "A short report you can share with your team",
 ];
 
 export default function AuditPage() {
@@ -34,7 +34,7 @@ export default function AuditPage() {
             <span className="italic text-accent">In about seven minutes.</span>
           </>
         }
-        lede="Tell me a little about your clinic and I will send back a short, honest report — what works, what doesn't, and the three highest-impact things you can fix this week. No commitment, no sales call."
+        lede="Tell me a little about your clinic. I'll send back a short, honest report — what works, what doesn't, and three things to fix this week. No commitment."
       />
 
       <section className="border-b border-line py-20 md:py-28">

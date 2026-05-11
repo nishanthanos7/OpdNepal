@@ -25,58 +25,58 @@ export type IconType = ComponentType<SVGProps<SVGSVGElement>>;
 export const heroStats: { value: string; label: string; source?: string }[] = [
   {
     value: "50 ms",
-    label: "is all a patient needs to form an opinion of your website",
+    label: "is all a patient needs to judge your website.",
     source: "Lindgaard et al., 2006",
   },
   {
     value: "75%",
-    label: "of users judge a clinic's credibility by visual design alone",
+    label: "decide if they trust a clinic from its design alone.",
     source: "Stanford Web Credibility Project",
   },
   {
     value: "88%",
-    label: "of patients won't return after one bad website experience",
-    source: "Sweor / Adobe consumer studies",
+    label: "don't come back after one bad website visit.",
+    source: "Sweor / Adobe",
   },
 ];
 
 export const problems: string[] = [
-  "Most clinics in Nepal still have no website — or one that hasn't been touched since 2018.",
-  "Patients Google your name and find a half-finished Facebook page, an outdated listing, or nothing at all.",
-  "Meanwhile, the clinic three streets down — the one with a clean website and an online booking link — is the one getting the appointment.",
-  "Every week without a proper site is a week of patients quietly choosing someone else.",
+  "Most clinics in Nepal still have no website — or one stuck in 2018.",
+  "Patients Google your name and find a half-finished Facebook page, or nothing at all.",
+  "The clinic with a clean website and online booking is the one getting the appointment.",
+  "Every week without a proper site is patients quietly choosing someone else.",
 ];
 
 export const whyReasons: { icon: IconType; title: string; body: string }[] = [
   {
     icon: ShieldIcon,
-    title: "Patients verify before they book",
-    body: "Before stepping into a clinic, patients want to see your credentials, your team and your facility. A real website is the first place they look — and the first place they decide to trust you.",
+    title: "Patients check before they book",
+    body: "They want to see your credentials, your team, your clinic. A real website is where they decide to trust you.",
   },
   {
     icon: GlobeIcon,
-    title: "You control the narrative",
-    body: "Without a site, your reputation is whatever Google, Facebook reviews and old listings say. A proper website lets you present your specialty, philosophy and outcomes — in your words.",
+    title: "You control your story",
+    body: "Without a site, Google and old Facebook posts speak for you. A website lets you speak for yourself.",
   },
   {
     icon: ClockIcon,
-    title: "A 24/7 receptionist that never tires",
-    body: "Opening hours, location, prep instructions, fees, FAQs and bookings — handled while you sleep. Fewer phone calls, fewer no-shows, fewer confused patients at the front desk.",
+    title: "A 24/7 receptionist",
+    body: "Hours, location, fees, prep instructions, bookings — answered while you sleep. Fewer phone calls, fewer no-shows.",
   },
   {
     icon: SearchIcon,
-    title: "Found by patients searching symptoms",
-    body: "When someone in your city searches for the condition you treat, your clinic should be the answer. Proper SEO turns Google into a steady, free referral channel.",
+    title: "Found on Google",
+    body: "When patients in your city search your specialty, your clinic should be the answer. SEO done right brings steady referrals.",
   },
   {
     icon: StarIcon,
-    title: "A portfolio of your life's work",
-    body: "Your degrees, papers, fellowships, hospital affiliations and community work deserve a permanent home — not a buried Facebook post from three years ago.",
+    title: "A home for your work",
+    body: "Degrees, papers, fellowships, affiliations — in one calm page, not lost in old social posts.",
   },
   {
     icon: HeartPulseIcon,
-    title: "Calmer, better-prepared patients",
-    body: "Clear pre-visit instructions, fees and what-to-expect pages reduce anxiety. Patients arrive prepared. Consultations get easier. Outcomes improve.",
+    title: "Calmer patients",
+    body: "Clear instructions before the visit mean prepared patients, easier consultations and better outcomes.",
   },
 ];
 
@@ -89,49 +89,45 @@ export const services: {
   {
     icon: StethoscopeIcon,
     name: "Doctor portfolio site",
-    summary:
-      "A focused, single-doctor website that quietly says: this is a serious clinician.",
+    summary: "A clean single-doctor website that earns trust before the first call.",
     bullets: [
-      "Credentials, specialties and publications",
-      "Hospital and clinic affiliations",
-      "Contact, location, opening hours",
+      "Credentials, specialties, publications",
+      "Hospital & clinic affiliations",
+      "Contact, location, hours",
       "Patient testimonials (with consent)",
     ],
   },
   {
     icon: BuildingIcon,
     name: "Clinic website",
-    summary:
-      "A multi-doctor clinic site with services, team, and a clean booking flow.",
+    summary: "A multi-doctor clinic site with services, team and a simple booking flow.",
     bullets: [
-      "Services and pricing pages",
-      "Doctor profiles with availability",
+      "Services & pricing pages",
+      "Doctor profiles & availability",
       "Online appointment requests",
-      "Google Maps, directions, parking",
+      "Google Maps & directions",
     ],
   },
   {
     icon: CalendarIcon,
-    name: "Appointment booking system",
-    summary:
-      "A real online booking system — not a contact form pretending to be one.",
+    name: "Appointment booking",
+    summary: "A real online booking system — not a contact form in disguise.",
     bullets: [
       "Slot-based scheduling per doctor",
-      "Email and SMS confirmations",
-      "Reschedule and cancel links",
-      "Admin dashboard for the front desk",
+      "Email & SMS confirmations",
+      "Reschedule & cancel links",
+      "Front-desk dashboard",
     ],
   },
   {
     icon: ClipboardIcon,
     name: "Clinic / OPD management",
-    summary:
-      "Patient records, prescriptions and queue management — for clinics ready to go fully digital.",
+    summary: "Patient records, prescriptions and queue management — for clinics going fully digital.",
     bullets: [
-      "Patient files and visit history",
-      "Prescription and lab printouts",
-      "Multi-user roles (doctor, front desk, admin)",
-      "Daily, weekly and monthly reports",
+      "Patient files & visit history",
+      "Prescription & lab printouts",
+      "Doctor, front-desk & admin roles",
+      "Daily, weekly, monthly reports",
     ],
   },
 ];

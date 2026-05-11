@@ -15,15 +15,14 @@ export function FinalCtaSection() {
               The next step
             </p>
             <h2 className="mt-4 font-serif text-4xl leading-[1.1] tracking-tight text-paper sm:text-5xl">
-              See exactly what your clinic looks like online today.
+              See how your clinic looks online today.
               <br />
               <span className="text-gold italic">Free, in seven minutes.</span>
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-paper/80">
-              Send me your clinic name. Within 24 hours, you&rsquo;ll get a
-              short, honest report of how your clinic appears on Google,
-              Facebook and the open web — with the three highest-impact things
-              you can fix this week. No commitment. No sales pitch.
+              Send me your clinic name. Within 24 hours I&rsquo;ll send a short,
+              honest report — and the three things you can fix this week. No
+              commitment, no sales pitch.
             </p>
           </div>
 

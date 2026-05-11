@@ -17,7 +17,7 @@ export function ServicesSection() {
               Nothing else, on purpose.
             </>
           }
-          lede="Solo studio. Healthcare-only. Each engagement is one of these — quoted, scoped and delivered as a single, fixed-price project."
+          lede="Solo studio. Healthcare only. Each project is fixed-priced, scoped and delivered end to end."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">

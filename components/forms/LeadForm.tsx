@@ -35,43 +35,77 @@ const fields: Field[] = [
 ];
 
 export function LeadForm({ intent, submitLabel, successTitle, successBody }: LeadFormProps) {
-  const [done, setDone] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "fallback">("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
+    const payload = {
+      intent,
+      name: String(data.get("name") ?? ""),
+      clinic: String(data.get("clinic") ?? ""),
+      email: String(data.get("email") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+      city: String(data.get("city") ?? ""),
+      message: String(data.get("message") ?? ""),
+    };
+
+    setStatus("sending");
+
+    // First, try the server route (Web3Forms email + CallMeBot WhatsApp).
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = (await res.json().catch(() => ({ ok: false }))) as { ok?: boolean };
+      if (json.ok) {
+        setStatus("done");
+        return;
+      }
+    } catch {
+      // ignore; we'll fall back to mailto
+    }
+
+    // Fallback — open the user's mail client with everything pre-filled.
     const subject = encodeURIComponent(
       intent === "audit"
-        ? `Free audit request — ${data.get("clinic") ?? ""}`
-        : `New enquiry — ${data.get("clinic") ?? ""}`,
+        ? `Free audit request — ${payload.clinic}`
+        : `New enquiry — ${payload.clinic}`,
     );
     const lines = [
-      `Name: ${data.get("name") ?? ""}`,
-      `Clinic: ${data.get("clinic") ?? ""}`,
-      `Email: ${data.get("email") ?? ""}`,
-      `Phone: ${data.get("phone") ?? ""}`,
-      `City: ${data.get("city") ?? ""}`,
+      `Name: ${payload.name}`,
+      `Clinic: ${payload.clinic}`,
+      `Email: ${payload.email}`,
+      `Phone: ${payload.phone}`,
+      `City: ${payload.city}`,
       "",
-      `Message:`,
-      `${data.get("message") ?? ""}`,
+      "Message:",
+      payload.message,
     ];
     const body = encodeURIComponent(lines.join("\n"));
-    // Open the user's mail client with everything pre-filled. Works
-    // without a backend; replace later with a real API route if needed.
     window.location.href = `mailto:${siteConfig.contact.email}?subject=${subject}&body=${body}`;
-    setDone(true);
+    setStatus("fallback");
   }
 
-  if (done) {
+  if (status === "done" || status === "fallback") {
+    const fallback = status === "fallback";
     return (
       <div className="rounded-2xl border border-line bg-paper p-8 sm:p-10">
         <span className="grid h-11 w-11 place-items-center rounded-full bg-accent text-paper">
           <CheckIcon className="h-5 w-5" aria-hidden />
         </span>
-        <h3 className="mt-5 font-serif text-2xl text-ink">{successTitle}</h3>
-        <p className="mt-3 text-[15px] leading-7 text-mute">{successBody}</p>
+        <h3 className="mt-5 font-serif text-2xl text-ink">
+          {fallback ? "Message ready to send." : successTitle}
+        </h3>
+        <p className="mt-3 text-[15px] leading-7 text-mute">
+          {fallback
+            ? "Your email client should have opened with everything pre-filled. Hit send, and I will reply within 24 hours."
+            : successBody}
+        </p>
         <p className="mt-3 text-sm text-mute">
-          If your mail client did not open, you can also write directly to{" "}
+          Or write directly to{" "}
           <a
             href={`mailto:${siteConfig.contact.email}`}
             className="text-ink underline underline-offset-4"
@@ -127,9 +161,9 @@ export function LeadForm({ intent, submitLabel, successTitle, successBody }: Lea
       </div>
 
       <div className="mt-7 flex flex-wrap items-center gap-4">
-        <Button type="submit" size="lg" variant="primary">
-          {submitLabel}
-          <ArrowRightIcon aria-hidden className="h-4 w-4" />
+        <Button type="submit" size="lg" variant="primary" disabled={status === "sending"}>
+          {status === "sending" ? "Sending…" : submitLabel}
+          {status !== "sending" ? <ArrowRightIcon aria-hidden className="h-4 w-4" /> : null}
         </Button>
         <p className="text-xs text-mute">
           Your details stay private. I reply within 24 hours, Sun–Fri.

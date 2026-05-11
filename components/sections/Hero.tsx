@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { LinkButton } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -21,7 +22,7 @@ export function Hero() {
             </div>
 
             <h1 className="anim-rise anim-rise-2 mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-ink sm:text-5xl md:text-[3.5rem] lg:text-[4rem]">
-              Your patients are already searching for you online.
+              Your patients are searching for you online.
               <span className="block text-mute">
                 <em className="not-italic text-accent">Let&rsquo;s make sure</em>{" "}
                 they find a clinic they trust.
@@ -29,14 +30,11 @@ export function Hero() {
             </h1>
 
             <p className="anim-rise anim-rise-3 mt-7 max-w-xl text-lg leading-8 text-mute">
-              I&rsquo;m{" "}
-              <span className="text-ink-soft">Nishan Poudel</span> — a
-              Kathmandu-based developer who builds calm, fast, professional
-              websites for doctors, clinics and hospitals in Nepal. From a{" "}
-              <span className="text-ink-soft">NPR 9,999 portfolio site</span>{" "}
-              that goes live in ten days, to a full appointment-booking
-              system. No agency overhead. No bloated templates. One
-              developer, focused on healthcare.
+              I&rsquo;m <span className="text-ink-soft">Nishan Poudel</span> — a
+              Kathmandu developer building calm, fast websites for doctors and
+              clinics in Nepal. Starts at{" "}
+              <span className="text-ink-soft">NPR 9,999</span>, live in ten days.
+              One developer. Healthcare only.
             </p>
 
             <div className="anim-rise anim-rise-4 mt-9 flex flex-wrap items-center gap-3">
@@ -59,56 +57,36 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Editorial "card" — the visual anchor. Pure CSS, no images. */}
+          {/* Editorial card with a stock photograph anchoring the hero. */}
           <aside className="md:col-span-5 lg:col-span-5">
             <div className="anim-rise anim-rise-3 relative">
               <div
                 aria-hidden
                 className="absolute -inset-4 rounded-4xl bg-linear-to-br from-accent-soft via-transparent to-transparent blur-2xl"
               />
-              <article className="relative rounded-3xl border border-line bg-paper p-7 shadow-[0_1px_0_rgba(11,18,32,0.04),0_24px_48px_-24px_rgba(11,18,32,0.18)] sm:p-9">
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.18em] text-mute">
-                  <span>Case note</span>
-                  <span>№ 001</span>
+              <article className="relative overflow-hidden rounded-3xl border border-line bg-paper shadow-[0_1px_0_rgba(11,18,32,0.04),0_24px_48px_-24px_rgba(11,18,32,0.18)]">
+                <div className="relative aspect-4/5 w-full">
+                  <Image
+                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=80"
+                    alt="A Nepali doctor in a calm, modern clinic"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 480px"
+                    className="object-cover"
+                    priority
+                  />
                 </div>
-                <p className="mt-5 font-serif text-2xl italic leading-9 text-ink-soft">
-                  &ldquo;Patients form an opinion of your website in
-                  <span className="not-italic font-medium text-accent">
-                    {" "}fifty milliseconds
-                  </span>
-                  . That is faster than the time it takes to say
-                  &lsquo;namaste&rsquo;.&rdquo;
-                </p>
-                <p className="mt-4 text-sm text-mute">
-                  &mdash; Lindgaard et al., <em>Behaviour &amp; IT</em>, 2006
-                </p>
-                <hr className="my-7 border-line" />
-                <dl className="grid grid-cols-3 gap-4 text-center">
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.16em] text-mute">
-                      Studio
-                    </dt>
-                    <dd className="mt-1 font-serif text-base text-ink">
-                      OpdNepal
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.16em] text-mute">
-                      Lead
-                    </dt>
-                    <dd className="mt-1 font-serif text-base text-ink">
-                      N. Poudel
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.16em] text-mute">
-                      Region
-                    </dt>
-                    <dd className="mt-1 font-serif text-base text-ink">
-                      Nepal
-                    </dd>
-                  </div>
-                </dl>
+                <div className="p-6 sm:p-7">
+                  <p className="font-serif text-base italic leading-7 text-ink-soft">
+                    &ldquo;Patients form an opinion of your website in{" "}
+                    <span className="not-italic font-medium text-accent">
+                      fifty milliseconds
+                    </span>
+                    .&rdquo;
+                  </p>
+                  <p className="mt-2 text-xs uppercase tracking-[0.16em] text-mute">
+                    Lindgaard et al., 2006
+                  </p>
+                </div>
               </article>
             </div>
           </aside>

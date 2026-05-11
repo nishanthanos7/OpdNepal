@@ -16,10 +16,10 @@ export function PricingSection() {
               Most doctors start at{" "}
               <span className="italic text-accent">NPR 9,999</span>.
               <br className="hidden sm:block" />
-              No retainers, no hourly billing, no surprises.
+              No retainers. No surprises.
             </>
           }
-          lede="Three engagement sizes. Most doctors begin with the Portfolio — it is the smallest possible step that still produces a real, professional, fast site. You can always upgrade later."
+          lede="Three sizes. Most doctors begin with the Portfolio — the smallest step that still produces a real, professional site. Upgrade later if you want."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">

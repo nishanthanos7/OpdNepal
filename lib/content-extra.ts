@@ -5,27 +5,27 @@ export const processSteps: { step: string; title: string; body: string }[] = [
   {
     step: "01",
     title: "Free 7-minute audit",
-    body: "I look at how your clinic shows up online today — Google, Facebook, existing site, mobile speed — and send you a short, honest report. No commitment.",
+    body: "I look at how your clinic shows up on Google, Facebook and mobile — and send a short report. No commitment.",
   },
   {
     step: "02",
-    title: "30-minute discovery call",
-    body: "We talk about your clinic, your patients and what you want a website to actually do for you. I take notes; you ask anything.",
+    title: "30-minute call",
+    body: "We talk about your clinic and what you want a website to do for you. You ask anything.",
   },
   {
     step: "03",
-    title: "Quote and timeline",
-    body: "A fixed-price quote, a clear scope, and a written timeline. No hourly billing surprises. You approve before any code is written.",
+    title: "Quote & timeline",
+    body: "A fixed price, a clear scope and a written timeline. You approve before any code is written.",
   },
   {
     step: "04",
-    title: "Design and build",
-    body: "I share design previews early and often. You see real progress every few days, not a black box for six weeks.",
+    title: "Design & build",
+    body: "You see real progress every few days — not a black box for six weeks.",
   },
   {
     step: "05",
-    title: "Launch and 30 days of free tweaks",
-    body: "We go live together. For the next 30 days, any small change is free — copy edits, photo swaps, fixes. After that, ongoing care is optional.",
+    title: "Launch + 30 free tweaks",
+    body: "We go live together. For 30 days, small changes are free. Ongoing care is optional.",
   },
 ];
 
@@ -45,15 +45,15 @@ export const pricingTiers: {
     price: "NPR 9,999",
     priceNote: "one-time, all-in",
     pitch:
-      "A polished single-doctor site that quietly says: this is a serious clinician — and earns the patient's trust before they ever pick up the phone.",
+      "A polished single-doctor site that earns the patient's trust before they pick up the phone.",
     features: [
       "Single-page portfolio, mobile-first",
       "Credentials, specialties & affiliations",
       "Click-to-call & WhatsApp button",
       "Google Maps + Google Business setup",
-      "Basic SEO so your name ranks on Google",
+      "Basic SEO so your name ranks",
       "Live in 7–10 days",
-      "30 days of free tweaks after launch",
+      "30 days of free tweaks",
     ],
     ctaLabel: "Start with the portfolio — NPR 9,999",
     ctaHref: "/contact?plan=portfolio",
@@ -62,8 +62,8 @@ export const pricingTiers: {
   },
   {
     name: "Clinic Website + Booking",
-    price: "NPR 39,999",
-    priceNote: "one-time",
+    price: "On request",
+    priceNote: "fixed quote after a short call",
     pitch:
       "A multi-page clinic site with real online appointment requests — for clinics ready to stop juggling phone calls.",
     features: [
@@ -71,23 +71,23 @@ export const pricingTiers: {
       "Online appointment booking",
       "Doctor profiles & availability",
       "Email + SMS confirmations",
-      "City + specialty SEO",
+      "City & specialty SEO",
       "Bilingual: English / नेपाली",
       "Delivered in ~3–4 weeks",
     ],
-    ctaLabel: "Choose Clinic + Booking",
+    ctaLabel: "Ask for a quote",
     ctaHref: "/contact?plan=clinic",
   },
   {
     name: "Hospital / OPD System",
-    price: "Custom",
+    price: "On request",
     priceNote: "quoted per project",
     pitch: "Multi-department hospitals and groups with bespoke needs.",
     features: [
       "Departments, doctors, careers, news",
-      "Full OPD / clinic management modules",
+      "Full OPD / clinic management",
       "Multi-language (English / नेपाली)",
-      "Integrations (HMIS, payments, lab)",
+      "HMIS, payment & lab integrations",
       "Quoted after a discovery call",
     ],
     ctaLabel: "Request a quote",
@@ -129,30 +129,30 @@ export const testimonials: {
 export const faqs: { q: string; a: string }[] = [
   {
     q: "Do you only build for medical clients?",
-    a: "Yes. I work exclusively with doctors, clinics and hospitals in Nepal. That focus is the reason I can move fast and ask the right questions — I'm not learning your world from scratch on your project.",
+    a: "Yes — only doctors, clinics and hospitals in Nepal. That focus is why I can move fast and ask the right questions from day one.",
   },
   {
     q: "Why is the Doctor Portfolio only NPR 9,999?",
-    a: "Because the goal is to remove every reason to hesitate. Most doctors in Nepal still have no real website at all — and the longer that stays true, the more patients they quietly lose. NPR 9,999 is priced as the smallest possible commitment that still produces a real, professional, fast portfolio site. It is the package most doctors start with, and most upgrade later.",
+    a: "To remove every reason to hesitate. Most doctors in Nepal still have no real website. NPR 9,999 is the smallest step that still produces a fast, professional site. Most doctors start here and upgrade later.",
   },
   {
-    q: "How long does a typical project take?",
-    a: "A Doctor Portfolio site is live in 7–10 days. A full Clinic Website with online booking takes 3–4 weeks. Hospital and OPD-system projects depend on scope and are quoted after a discovery call.",
+    q: "How long does a project take?",
+    a: "Doctor Portfolio: 7–10 days. Clinic Website with booking: 3–4 weeks. Hospital / OPD systems: quoted after a call.",
   },
   {
-    q: "What do I need to provide?",
-    a: "Your credentials, a few photos, your services and prices, and around two hours of your time spread across the project. I write the first draft of the copy for you — you only edit.",
+    q: "What do you need from me?",
+    a: "Your credentials, a few photos, your services, and roughly two hours of your time across the project. I write the first draft of the copy — you only edit.",
   },
   {
-    q: "Will my website work on slow internet?",
-    a: "Yes. Sites are built mobile-first and optimised for Nepal's networks. Pages typically load in under two seconds on 4G.",
+    q: "Will it work on slow internet?",
+    a: "Yes. Sites are mobile-first and tuned for Nepal's networks — pages typically load in under two seconds on 4G.",
   },
   {
     q: "What about Nepali language?",
-    a: "Bilingual English / नेपाली sites are included on the Clinic and Hospital tiers. On the Doctor Portfolio you can start in English and add Nepali later for a small one-time fee.",
+    a: "Bilingual English / नेपाली is included on Clinic and Hospital tiers. On Portfolio you can start in English and add Nepali later.",
   },
   {
     q: "What happens after launch?",
-    a: "You get 30 days of free tweaks — small copy changes, photo swaps, bug fixes. After that, ongoing care plans start at NPR 1,499/month, or you can self-manage. No lock-in.",
+    a: "30 days of free tweaks — copy changes, photo swaps, small fixes. After that, ongoing care is optional. No lock-in.",
   },
 ];

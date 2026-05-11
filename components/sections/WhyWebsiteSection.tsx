@@ -11,12 +11,12 @@ export function WhyWebsiteSection() {
           eyebrow="Why this matters"
           title={
             <>
-              A proper website is not a brochure.
+              A website is not a brochure.
               <br className="hidden sm:block" />
               It is a <span className="italic text-accent">second front desk</span>.
             </>
           }
-          lede="Six things a real medical website does for a clinic — quietly, every day, while you focus on patients."
+          lede="Six things a real medical website does — quietly, every day, while you focus on patients."
         />
 
         <figure className="mt-14 overflow-hidden rounded-3xl border border-line bg-paper">

@@ -15,23 +15,23 @@ export const metadata: Metadata = {
 const principles = [
   {
     title: "Healthcare-only, on purpose",
-    body: "I do not build for restaurants, e-commerce, crypto or anyone else. Every project is medical. That focus is the reason I can ask the right questions on day one — about referral patterns, OPD flow, prescription handling, language preferences — instead of learning your world from scratch on your time.",
+    body: "Every project is medical. That focus is why I can ask the right questions on day one — about OPD flow, prescriptions, language — instead of learning your world on your time.",
   },
   {
     title: "One project at a time",
-    body: "I take a small number of clients each quarter and finish each one before starting the next. You will not be juggled against four other projects. You will know the person writing every line of your website by their first name.",
+    body: "A few clients each quarter, each one finished before the next begins. You will not be juggled. You will know the person writing every line of your site.",
   },
   {
     title: "Calm communication",
-    body: "Short, clear updates. Quick replies during clinic hours. No design-by-Slack-message. Decisions are documented so nothing gets lost.",
+    body: "Short, clear updates. Quick replies in clinic hours. Decisions written down so nothing gets lost.",
   },
   {
     title: "Honest pricing",
-    body: "Fixed quotes, written before work begins. If the scope changes, you see the new number first. No hourly billing surprises, no retainer lock-ins.",
+    body: "Fixed quotes, written before work begins. Scope changes are agreed first. No hourly billing, no retainer lock-ins.",
   },
   {
     title: "Built to outlast me",
-    body: "Plain, well-documented code on standard tools (Next.js, Tailwind, PostgreSQL). If, one day, you choose to work with someone else, your website will still make sense to them.",
+    body: "Plain, well-documented code on standard tools (Next.js, Tailwind, PostgreSQL). If you ever change developer, your site will still make sense.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
             <span className="italic text-accent">A studio of one, for Nepal&rsquo;s medical professionals.</span>
           </>
         }
-        lede="I write code. I read medical papers for fun. I run OpdNepal — a one-person studio that builds calm, professional websites for Nepal's doctors, clinics and hospitals. This page explains how I work, and why a NPR 9,999 portfolio site is, for most doctors, the smartest first move."
+        lede="I write code. I read medical papers for fun. I run OpdNepal — a one-person studio building calm websites for Nepal's doctors and clinics. This page is how I work, and why NPR 9,999 is, for most doctors, the smartest first move."
       />
 
       <section className="border-b border-line py-20 md:py-28">
@@ -81,23 +81,18 @@ export default function AboutPage() {
               </h2>
               <div className="mt-5 space-y-5 text-[15px] leading-7 text-ink-soft">
                 <p>
-                  When you write to OpdNepal, the email lands in my own
-                  inbox. I read it. I reply. I write the code. I push it to
-                  production. There is no account manager, no junior to
-                  hand it off to, and no template factory churning out
-                  forty sites a month.
+                  Write to OpdNepal and the email lands in my own inbox. I
+                  read it, I reply, I write the code, I push it live. No
+                  account manager, no template factory.
                 </p>
                 <p>
-                  That is the whole point of a studio of one — and the
-                  reason I can offer a real, professional Doctor Portfolio
-                  for{" "}
-                  <span className="font-medium text-ink">NPR 9,999</span>.
-                  No agency overhead, no padded retainers, no surprise
-                  invoices.
+                  That is why a real Doctor Portfolio is{" "}
+                  <span className="font-medium text-ink">NPR 9,999</span> —
+                  no agency overhead, no padded retainers.
                 </p>
                 <p className="font-serif italic text-mute">
-                  &ldquo;The doctor patients trust online is, more often than
-                  not, simply the doctor whose website loaded first.&rdquo;
+                  &ldquo;The doctor patients trust online is often simply the
+                  doctor whose website loaded first.&rdquo;
                 </p>
               </div>
             </div>
@@ -146,22 +141,18 @@ export default function AboutPage() {
             <div className="md:col-span-7">
               <div className="space-y-5 font-serif text-lg leading-8 text-ink-soft">
                 <p>
-                  Walk into any clinic in Kathmandu and you will see the same
-                  thing: a doctor who is excellent at medicine, a front desk
-                  that is excellent at people, and a website (if there is one
-                  at all) that is neither.
+                  Walk into any clinic in Kathmandu and you see the same thing:
+                  a doctor who is excellent at medicine, a front desk excellent
+                  at people, and a website (if any) that is neither.
                 </p>
                 <p>
-                  Patients today verify before they trust. They Google your
-                  name on the way to the appointment. They ask their friends
-                  to send your link on WhatsApp. The first impression is no
-                  longer at the reception desk &mdash; it is on a phone,
-                  fifty milliseconds after a search result loads.
+                  Patients verify before they trust. They Google your name on
+                  the way to the appointment. The first impression is no longer
+                  at the reception desk — it is on a phone.
                 </p>
                 <p className="italic text-accent">
-                  I built this studio so the digital part of your clinic
-                  feels as careful as the clinical part. That is the entire
-                  brief.
+                  I built this studio so the digital side of your clinic feels
+                  as careful as the clinical side. That is the whole brief.
                 </p>
               </div>
 

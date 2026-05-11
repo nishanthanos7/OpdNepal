@@ -26,7 +26,7 @@ export default function ServicesPage() {
             <span className="italic text-accent">Each one fully scoped.</span>
           </>
         }
-        lede="A small studio, on purpose. I work on one project at a time, end to end. Below is exactly what is included in each engagement — and what is not."
+        lede="A small studio, on purpose. One project at a time, end to end. Here is exactly what each one includes."
       />
 
       <section className="border-b border-line py-20 md:py-28">

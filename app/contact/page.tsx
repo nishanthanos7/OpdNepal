@@ -22,7 +22,7 @@ export default function ContactPage() {
             <span className="italic text-accent">I&rsquo;ll reply within 24 hours.</span>
           </>
         }
-        lede="No automated funnel, no sales agent. Your message goes straight to my inbox — and I write back, in plain language, the same week."
+        lede="No bots, no funnel. Your message lands in my inbox — and I reply, in plain language, the same week."
       />
 
       <section className="border-b border-line py-20 md:py-28">
